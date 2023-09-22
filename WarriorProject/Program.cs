@@ -11,8 +11,8 @@ namespace WarriorProject
         private int _x;
         private int _y;
 
-        public int X { get => _x; }
-        public int Y { get => _y; }
+        public int X { get => _x;  set { _x = value;} }
+        public int Y { get => _y;  set { _y = value;} }
         public Position(int x, int y)
         {
             _x= x;
@@ -20,7 +20,7 @@ namespace WarriorProject
         }
         public void ToConsole()
         {
-            Console.WriteLine($"({_x}, {_y})");
+            Console.WriteLine($"({_x},{_y})");
         }
     }
     public class Warrior
@@ -43,7 +43,7 @@ namespace WarriorProject
         }
         public void ToConsole()
         {
-            Console.WriteLine($"{_name}, position ({_position})");
+            Console.WriteLine($"{_name}, position ({_position.X},{_position.Y})");
         }
     }
     class Program
